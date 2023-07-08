@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Candidate Search</title>
+    <link rel="stylesheet" href="search.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+</head>
+
+<body>
+    <section class="live-filter">
+        
+        <section id="search-form">
+            
+            <div class="search">
+                <header>
+                    <a href="homepage.html" class="go-back"><i class="fas fa-arrow-left"></i> Go Back</a>
+                </header>
+                <p>Top Candidates Are Here</p>
+                <p>Search your favourite candidates</p>
+                <form>
+                    <i class="fas fa-map-marker-alt"></i>
+                    <input type="text" id="location-input" placeholder="Location">
+                    <select id="job-role-select">
+                        <option value="" disabled selected>Job Roles</option>
+                        <option value="Backened Developer">Backened Developer</option>
+                        <option value="Data Scientist">Data Scientist</option>
+                        <option value="Frontened Developer">Frontened Developer</option>
+                        <option value="Full Stack Developer">Full Stack Developer</option>
+                        <option value="Software Engineer">Software Engineer</option>
+                        <option value="UX Designer">UX Designer</option>
+                        <option value="Web Developer">Web Developer</option>
+                        <!-- Add more job roles as needed -->
+                    </select>
+                   
+                        <button class="disable" type="button" id="search-button" onclick="searchCandidates()" disabled><i class='fas fa-search'></i> Search</button>
+                    
+                </form>
+            </div>
+        </section>
+
+        <section class="candidate-list" id="candidate-list">
+            <div class="user-info">
+                <h2 class="title">Matching Candidates</h2>
+                <ul id="candidates">
+                    <!-- Candidate list will be dynamically populated here -->
+                </ul>
+            </div>
+        </section>
+
+        <section id="recent-searches">
+            <div class="user-info">
+                <h2 class="title">Recent Searches</h2>
+                <ul id="recent-candidates">
+                    <!-- Later rankings list will be dynamically populated here -->
+                </ul>
+            </div>
+        </section>
+    </section>
+    <!-- footer section -->
+    <footer>
+        <span>Recruitment Solution App | <span class="far fa-copyright"></span> 2023 All rights reserved.</span>
+    </footer>
+    <script src="searchScript.js"></script>
+</body>
+
+</html>
